@@ -32,19 +32,19 @@ venv\Scripts\activate
 source venv/bin/activate
 
 # Install dependencies
-pip install -r requirements.txt
+pip install .
 
 # Run the app
 streamlit run frontend/app.py
 ```
 
-The app opens at `http://localhost:8501`. Paste your OpenAI API key into the sidebar to begin.
+The app opens at `http://localhost:8501`. Set your OpenAI API key in the `.env` file to begin.
 
 ## Project Structure
 
 ```
 Clarity/
-├── requirements.txt
+├── pyproject.toml
 ├── backend/
 │   ├── __init__.py
 │   ├── models.py                  # Pydantic data models (Thought, Connection, Cluster, ...)
