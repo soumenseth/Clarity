@@ -1,0 +1,43 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Streamlit: Run App",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "streamlit",
+      "args": ["run", "frontend/app.py", "--server.port", "8501"],
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}"
+      },
+      "cwd": "${workspaceFolder}",
+      "jinja": true,
+      "justMyCode": true
+    },
+    {
+      "name": "Streamlit: Run App (vendor code)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "streamlit",
+      "args": ["run", "frontend/app.py", "--server.port", "8501"],
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}"
+      },
+      "cwd": "${workspaceFolder}",
+      "jinja": true,
+      "justMyCode": false
+    },
+    {
+      "name": "Pytest: Run Tests",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "pytest",
+      "args": ["tests/", "-v"],
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}"
+      },
+      "cwd": "${workspaceFolder}",
+      "justMyCode": true
+    }
+  ]
+}
